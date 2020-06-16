@@ -31,11 +31,21 @@ namespace IndexerExample
             // Пример ошибочной строки
             // Console.WriteLine(lines[2]);
         }
+
+        static void DocumentMotionsExample()
+        {
+            var doc = new Document();
+            doc.Motions.Add("Движение 1");
+            doc.Motions.Add("Движение 2");
+            
+            Console.WriteLine($"Движений в документе \"{doc.Number}\": {doc.Motions.Count}");
+        }
         
         static void Main(string[] args)
         {
             DayExample();
             LinesExample();
+            DocumentMotionsExample();
             
             Console.ReadLine();
         }
